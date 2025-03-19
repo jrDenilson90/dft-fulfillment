@@ -1,0 +1,13 @@
+.boxFlex {
+    width: 100%;
+    display: flex;
+    .left {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 50%;
+    }
+}

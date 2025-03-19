@@ -1,0 +1,173 @@
+.categories {
+    background-color: #DAE9C4;
+    position: relative;
+    .categoriesTemplate {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 3vw 5vw 7vw;
+        
+        @media (max-width: 768px) {
+            padding: 5vw 0;
+        }
+    
+        .mainTitle {
+            width: 100%;
+            padding: 0 5vw;
+            h1 {
+                text-align: center;
+                text-transform: uppercase;
+                color: #47703B;
+                font-size: 2.5vw;
+                font-weight: 700;
+                @media (max-width: 768px) {
+                    font-size: 4.8vw;
+                }
+            }
+        }
+    
+        .boxFlex {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 2vw;
+            flex-wrap: wrap;
+            margin-top: 3vw;
+            @media (max-width: 768px) {
+                flex-wrap: nowrap;
+                justify-content: start;
+                overflow-x: auto;
+                padding: 0 5vw;
+            }
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+    
+            .card {
+                width: calc((100% / 4) - 1.5vw);
+                text-decoration: none;
+                box-sizing: border-box;
+                border-radius: 2.2vw;
+                border: #47703B solid .2vw;
+                background-color: #ffffff;
+                @media (max-width: 768px) {
+                    // border-radius: 3vw;
+                    width: auto;
+                }
+    
+                &:hover {
+                    .boxImg {
+                        img {
+                            transform: scale(1.05);
+                            // filter: grayscale(1);
+                        }
+                    }
+                    .boxText {
+                        button {
+                            background-color: #47703B;
+                            p {
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+    
+                .boxImg {
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 2.2vw 2.2vw 0 0;
+                    @media (max-width: 768px) {
+                        // border-radius: 3vw 3vw 0 0;
+                    }
+                    img {
+                        transition-duration: .3s;
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        filter: grayscale(0);
+                        @media (max-width: 768px) {
+                            width: 40vw;
+                        }
+                    }
+                }
+    
+                .boxText {
+                    width: 100%;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 0 0 2.2vw 2.2vw;
+                    padding: 1vw;
+                    @media (max-width: 768px) {
+                        // border-radius: 0 0 3vw 3vw;
+                        padding: 2vw;
+                    }
+                    p {
+                        color: black;
+                        font-size: 1.1vw;
+                        line-height: 1.2;
+                        font-weight: 500;
+    
+                        @media (max-width: 768px) {
+                            font-size: 2.9vw;
+                        }
+                    }
+
+                    .text {
+                        p {
+                            @media (max-width: 768px) {
+                                height: 11.5vw;
+                            }
+                        }
+                    }
+    
+                    button {
+                        margin-top: 1vw;
+                        width: fit-content;
+                        border-radius: 3vw;
+                        border: #47703B solid .15vw;
+                        p {
+                            padding: .5vw 1.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .detal {
+        position: absolute;
+        &.detal1 {
+            width: 40vw;
+            top: 0;
+            left: 0;
+            @media (max-width: 768px) {
+                width: 40vw;
+            }
+        }
+        &.detal2 {
+            width: 35vw;
+            top: 0;
+            right: 0;
+            @media (max-width: 768px) {
+                width: 34vw;
+            }
+        }
+        &.detal3 {
+            width: 32vw;
+            bottom: 0;
+            left: 0;
+            @media (max-width: 768px) {
+                width: 28vw;
+            }
+        }
+        &.detal4 {
+            width: 23vw;
+            bottom: 0;
+            right: 1vw;
+            @media (max-width: 768px) {
+                width: 20vw;
+            }
+        }
+    }
+}

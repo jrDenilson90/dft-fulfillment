@@ -1,0 +1,10 @@
+mixin bannerFull(imgBlock, textBlock)
+    .bannerFullTemplate
+        .blockBox
+            if imgBlock.type === 'image'
+                img.desk(src=imgBlock.imgDesk, alt=imgBlock.alt)
+                img.mob(src=imgBlock.imgMob, alt=imgBlock.alt)
+
+        if textBlock && textBlock.type === 'text'
+            .blockText
+                div!= textBlock.text

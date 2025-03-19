@@ -1,0 +1,72 @@
+.bannerFullTemplate {
+    .blockBox {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            &.desk {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+            &.mob {
+                display: none;
+                @media (max-width: 768px) {
+                    display: block;
+                }
+            }
+        }
+        .blockTextCenter {
+            position: absolute;
+            @media (max-width: 768px) {
+                left: 40vw;
+            }
+            h1 {
+                color: #333333;
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 7vw;
+                width: min-content;
+                line-height: 0.75;
+                @media (max-width: 768px) {
+                    font-size: 8vw;
+                }
+                b {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .blockText {
+        background-color: #FC948B;
+        padding: 2vw 18vw;
+        @media (max-width: 768px) {
+            padding: 5vw;
+        }
+        p {
+            color: #ffffff;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            font-size: 1.8vw;
+            line-height: 1;
+            font-weight: 300;
+            @media (max-width: 768px) {
+                font-size: 3.8vw;
+            }
+            b {
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+

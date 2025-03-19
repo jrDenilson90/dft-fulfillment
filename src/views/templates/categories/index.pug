@@ -1,0 +1,16 @@
+mixin categories(id='', titleBlock=null, cards)
+    .categoriesTemplate(id=id)
+        if titleBlock && titleBlock.type === 'titlepag'
+            .mainTitle
+                h1= titleBlock.title
+        .boxFlex
+            each card in cards
+                a.card(href=card.link, target="_blank" rel="noopener noreferrer")
+                    .boxImg
+                        img(src=card.img, alt=card.alt)
+                    .boxText
+                        if card.text
+                            .text
+                                p!= card.text
+                            button
+                                p comprar
