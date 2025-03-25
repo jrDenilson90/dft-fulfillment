@@ -1,4 +1,50 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Inicio do Menu
+    function addScrollEvent(buttonSelector, targetSelector) {
+        document.querySelector(buttonSelector)?.addEventListener('click', function() {
+            document.querySelector(targetSelector).scrollIntoView({
+                block: "start", 
+                behavior: "smooth"
+            });
+        });
+    }
+    
+    addScrollEvent('.btnPrograma', '.programa');
+    addScrollEvent('.btnVantagens', '.vantagens');
+    addScrollEvent('.btnIncremento', '.incremento');
+    addScrollEvent('.btnBeneficios', '.beneficios');
+    addScrollEvent('.btnDuvidas', '.duvidas');
+    addScrollEvent('.btnCadastro', '.cadastro');
+    // Fim do Menu
+
+    // Função para fixar a sec2
+    window.addEventListener('scroll', function() {
+        const element = document.querySelector('.sec2');
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const elementOffsetTop = element.offsetTop;
+
+        if (scrollTop >= elementOffsetTop) {
+            element.classList.add('fixed');
+        }
+    });
+
+    // Usar IntersectionObserver para detectar quando sec1 aparece
+    const sec1 = document.querySelector('.sec1');
+    const sec2 = document.querySelector('.sec2');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sec2.classList.remove('fixed');
+            }
+        });
+    }, {
+        root: null, // Usar a viewport como contêiner
+        threshold: 0.1 // Acionar quando 10% do sec1 estiver visível
+    });
+
+    observer.observe(sec1);
+
     // Seleciona o elemento de parallax e a imagem dentro dele
     const parallaxImage = document.querySelector('.parallaxImage');
 
