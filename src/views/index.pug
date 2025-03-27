@@ -19,24 +19,26 @@ html(lang="pt-br")
             section.sec1
                 .boxVideo
                     img.imgLogoFull(src="https://dafitistatic.dafiti.com.br/cms/2025_03_19_10_27_44_Group_54.svg", alt="")
+                    .maskImg
+                        img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_27_10_03_55_unnamed_(1).gif", alt="")
                     .maskVideo
-                        video(src="https://dafitistatic.dafiti.com.br/cms/onsite/robozinhos.mp4" autoplay muted loop)
+                        video(src="https://dafitistatic.dafiti.com.br/cms/onsite/robozinhos.mp4" autoplay muted loop tabindex="-1")
                         .shadowMask
             
             section.sec2
-                nav(tabindex="-1")
-                    button.btnPrograma
+                nav
+                    button.btnPrograma(tabindex="-1")
                         p O programa
-                    button.btnVantagens
-                        p Vantagens
-                    button.btnIncremento
-                        p Incremento
-                    button.btnBeneficios
-                        p Benefícios
-                    button.btnDuvidas
-                        p Dúvidas
-                    button.btnCadastro
+                    button.btnCadastro(tabindex="-1")
                         p Cadastre-se
+                    button.btnVantagens(tabindex="-1")
+                        p Vantagens
+                    button.btnIncremento(tabindex="-1")
+                        p Potencial
+                    button.btnBeneficios(tabindex="-1")
+                        p Benefícios
+                    button.btnDuvidas(tabindex="-1")
+                        p Dúvidas
             
             section.sec3
                 .flexCol
@@ -108,14 +110,19 @@ html(lang="pt-br")
                             img.parallaxImage(src="https://dafitistatic.dafiti.com.br/cms/2025_03_19_14_58_37__Dafiti_CD_ALTA_DSC3293_RafaelRoncato_(1).jpg", alt="Foto  do centro de distribuição.")
                     .boxRight
                         h2 potencial de <b>incremento com dafiti full</b>
-                        img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_09_47_10_Group_26651332.svg", alt="")
+                        .boxImg
+                            img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_26_16_34_11_Group_26651332.svg", alt="Incremento de até 40% nas vendas. desenho de um grafico na parte superior temos a inforção de +40%, +25% e +12%, e na parte inferior temos a informação de Dropshipping, Dft Envios, Milk Run e Fulfillment com o maior nivel de crescimento.")
+                            .barra.barra1
+                            .barra.barra2
+                            .barra.barra3
+                            .barra.barra4
             
             section.secLine
                 .line
                     img.imgPers(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_10_48_50_Mask_group.png", alt="Foto do Daniel Soares. Diretor Executivo Comercial da Dafiti.")
                     .boxTxt
                         p O objetivo é que a nossa interface com os clientes seja cada vez mais unificada. Por isso, as marcas ‘Dafiti Full’ possibilitam que o consumidor tenha um <b>único frete e prazo de entrega reduzido na sua compra</b>. Para o seller, estimamos um incremento de até 30% nas vendas devido a maior variedade de sortimento, disponibilidade de grade e conversão pelo carrinho unificado e política de frete.
-                        p <b>Daniel Soares, Diretor Executivo Comercial da Dafiti.</b>
+                        p <b>Daniel Soares, CCO da Dafiti.</b>
             
             section.sec7.beneficios
                 .boxInfos
@@ -124,31 +131,36 @@ html(lang="pt-br")
                         p estatísticas que IMPULSIONAM SEU NEGÓCIO
                         img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_24_06_Frame.svg", alt="")
                     .line.line1
+                        img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_26_13_54_15_Group.svg", alt="")
+                        .text
+                            h3 Frete Grátis
+                            p em compras acima de R$199
+                    .line.line2
                         img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_20_17_Group_26651336.svg", alt="")
                         .text
                             h3 + DE 4 mil itens 
                             p separados por hora.
-                    .line.line2
+                    .line.line3
                         img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_20_18_Group_26651338.svg", alt="")
                         .text
                             h3 Aumento de até 50% 
                             p na eficiência da equipe.
-                    .line.line3
+                    .line.line4
                         img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_20_13_Group_26651333.svg", alt="")
                         .text
                             h3 Área de 250 mil m²
                             p equivalente a 30 campos de futebol.
-                    .line.line4
+                    .line.line5
                         .text
                             h3 + de 70 docas 
                             p com capacidade para mais de 100 caminhões por dia.
-                        img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_20_14_Group_26651334.svg", alt="")
-                    .line.line5
+                        img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_26_14_20_22_Group_26651334.svg", alt="")
+                    .line.line6
                         .text
                             h3 + DE 300 
                             p robôs em ação.
                         img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_20_11_20_20_Group_26651337.svg", alt="")
-                    .line.line6
+                    .line.line7
                         .text
                             h3 + de 10.000 pessoas 
                             p entre diretos e indiretos.
@@ -160,6 +172,19 @@ html(lang="pt-br")
                     .boxTxt
                         p Com o ‘Dafiti Full’, estamos redefinindo o padrão de <b>eficiência e suporte</b> para nossos parceiros no marketplace. Nossa infraestrutura de <b>ponta e processos automatizados</b> não apenas simplificam as operações dos sellers, mas também garantem que os clientes recebam uma <b>experiência de compra excepcional</b>. Ao centralizar a logística e oferecer soluções como embalagem sustentável e logística reversa, capacitamos nossos parceiros a focarem no crescimento de suas marcas, enquanto nós cuidamos do resto.
                         p <b>Rodrigo Rezende Leite, Diretor de Marketplace da Dafiti.</b>
+
+            section.sec9.cadastro
+                h2 cadastre-se para <b>participar</b>
+                p Interessado em aproveitar as vantagens do Dafiti Full? Inscreva-se agora para se tornar um seller parceiro e usufruir de todos os benefícios que o nosso sistema de fulfillment oferece.
+                .boxFlex
+                    .box
+                        p <b>Já sou seller e quero aderir ao Full</b>
+                        a(href="https://www.dafiti.com.br/formulario-atendimento/", rel="noopener noreferrer")
+                            p clique aqui
+                    .box
+                        p <b>Quero me cadastrar para vender na Dafiti</b>
+                        a(href="https://www.dafiti.com.br/quero-vender-na-dafiti/", rel="noopener noreferrer") 
+                            p clique aqui
 
             section.sec8.duvidas
                 h2 dúvidas sobre <b>Dafiti full</b>
@@ -346,18 +371,12 @@ html(lang="pt-br")
                             p Para esclarecer dúvidas e obter suporte sobre o programa Dafiti Full, você pode entrar em contato diretamente com o time de atendimento ao seller. Além disso, a Dafiti oferece um portal de parceiros repleto de recursos úteis, incluindo guias detalhados, FAQs e canais de contato específicos.
                             p Esses recursos são projetados para ajudar os sellers a navegar pelo programa com facilidade. Para questões mais específicas, você também pode enviar um e-mail para comercial.fulfillment@dafiti.com.br, onde uma equipe dedicada está pronta para oferecer assistência personalizada.
 
-            section.sec9.cadastro
-                h2 cadastre-se para <b>participar</b>
-                p Interessado em aproveitar as vantagens do Dafiti Full? Inscreva-se agora para se tornar um seller parceiro e usufruir de todos os benefícios que o nosso sistema de fulfillment oferece.
-                .boxFlex
-                    .box
-                        p <b>Já sou seller e quero aderir ao Full</b>
-                        a(href="http://", target="_blank", rel="noopener noreferrer")
-                            p clique aqui
-                    .box
-                        p <b>Quero me cadastrar para vender na Dafiti</b>
-                        a(href="http://", target="_blank", rel="noopener noreferrer") 
-                            p clique aqui
+            .centerButton
+                button.btnCadastroFixed
+                    p <span>Cadastre-se</span> agora no
+                    img(src="https://dafitistatic.dafiti.com.br/cms/2025_03_19_10_27_44_Group_54.svg", alt="Logotipo Dafiti Full")
+            
+            div(aria-live="polite" class="sr-only") Você chegou ao final da página. Obrigado por visitar!
 
     //- script(src="external/scripts.js")
     script(src="js/script.js")
